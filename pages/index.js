@@ -2,6 +2,13 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { MyCard } from '../components/MyCard'
 import styles from '../styles/Home.module.css'
+import bitCoinPic from '../assets/bitcoin.png'
+import crappoPic from '../assets/crappo.png'
+import { MyNumber } from '../components/MyNumber'
+import slide1Pic from '../assets/slide1.png'
+import slide2Pic from '../assets/slide2.png'
+import semiCirclePic from '../assets/semiCircle.png'
+import semiCircle2Pic from '../assets/semiCircle2.png'
 
 export default function Home() {
   const renderNavbar = () => {
@@ -163,10 +170,17 @@ export default function Home() {
         </div>
 
         <div className="relative">
-          <div style={{ minWidth: 604, minHeight: 585 }}>{/* image1 */}</div>
+          <div style={{ minWidth: 604, minHeight: 585 }}>
+            <Image src={bitCoinPic} alt="bitcoin" width={604} height={585} />
+            {/* image1 */}
+          </div>
 
-          {/* <div className="absolute top-[270px] right-[260px]">
-            <svg
+          <div className="absolute top-[269px] right-[261px]" style={{
+            minWidth: 928,
+            minHeight: 606
+          }}>
+            <Image src={slide1Pic} alt="slide1" width={928} height={606} />
+            {/* <svg
               width="928"
               height="606"
               viewBox="0 0 928 606"
@@ -199,11 +213,15 @@ export default function Home() {
                   <stop offset="1" stop-color="white" stop-opacity="0" />
                 </linearGradient>
               </defs>
-            </svg>
+            </svg> */}
           </div>
 
-          <div className="absolute top-[226px] -left-[6px]">
-            <svg
+          <div className="absolute top-[226px] -left-[6px]" style={{
+            width: 730,
+            height: 461
+          }}>
+            <Image src={slide2Pic} alt="slide1" width={730} height={461} />
+            {/* <svg
               width="730"
               height="461"
               viewBox="0 0 730 461"
@@ -231,8 +249,8 @@ export default function Home() {
                   <stop offset="1" stop-color="white" stop-opacity="0.01" />
                 </linearGradient>
               </defs>
-            </svg>
-          </div> */}
+            </svg> */}
+          </div>
         </div>
       </div>
     )
@@ -240,7 +258,7 @@ export default function Home() {
 
   const renderSection2 = () => {
     return (
-      <div className="container my-[100px]">
+      <div className="container my-[100px] relative">
         <div className="flex justify-between">
           <div className="flex">
             <div className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-white10">
@@ -270,8 +288,9 @@ export default function Home() {
               </svg>
             </div>
             <div className="ml-6">
-              <h1 className="font-rubik text-[40px] font-bold not-italic leading-normal">
-                $30B
+              <h1 className="font-rubik text-[40px] font-bold not-italic leading-normal flex">
+                {/* $30B */}
+                $<MyNumber to={30} />B
               </h1>
               <p className="font-rubik text-base font-normal not-italic leading-7 tracking-[.01em] text-brand-sloganDescription">
                 Digital Currency Exchanged
@@ -299,8 +318,9 @@ export default function Home() {
               </svg>
             </div>
             <div className="ml-6">
-              <h1 className="font-rubik text-[40px] font-bold not-italic leading-normal">
-                10M+
+              <h1 className="font-rubik text-[40px] font-bold not-italic leading-normal flex">
+                {/* 10M+ */}
+                <MyNumber to={10} />M+
               </h1>
               <p className="font-rubik text-base font-normal not-italic leading-7 tracking-[.01em] text-brand-sloganDescription">
                 Trusted Wallets Investor
@@ -325,7 +345,8 @@ export default function Home() {
             </div>
             <div className="ml-6">
               <h1 className="font-rubik text-[40px] font-bold not-italic leading-normal">
-                195
+                {/* 195 */}
+                <MyNumber to={195} />
               </h1>
               <p className="font-rubik text-base font-normal not-italic leading-7 tracking-[.01em] text-brand-sloganDescription">
                 Countries Supported
@@ -334,8 +355,12 @@ export default function Home() {
           </div>
         </div>
 
-        {/* <div className="absolute top-[53px] -right-[105px]">
-          <svg
+        <div className="absolute top-[53px] -right-[105px]" style={{
+          minWidth: 185,
+          minHeight: 196
+        }}>
+          <Image src={semiCirclePic} alt="bitcoin" width={185} height={196} />
+          {/* <svg
             width="185"
             height="196"
             viewBox="0 0 185 196"
@@ -359,17 +384,20 @@ export default function Home() {
                 <stop offset="1" stop-color="#35068C" stop-opacity="0.01" />
               </linearGradient>
             </defs>
-          </svg>
-        </div> */}
+          </svg> */}
+        </div>
       </div>
     )
   }
 
   const renderSection3 = () => {
     return (
-      <div className="container mt-[100px]">
+      <div className="container mt-[100px] relative">
         <div className="flex items-center justify-between">
-          <div style={{ minWidth: 650, minHeight: 473 }}>{/* image2 */}</div>
+          <div style={{ minWidth: 650, minHeight: 473 }}>
+            <Image src={crappoPic} alt="bitcoin" width={650} height={473} />
+            {/* image2 */}
+          </div>
 
           <div>
             <div>
@@ -396,8 +424,12 @@ export default function Home() {
           </div>
         </div>
 
-        {/* <div className="absolute bottom-[67px] -right-[86px]">
-          <svg
+        <div className="absolute bottom-[67px] -right-[86px]" style={{
+          minWidth: 154,
+          minHeight: 120
+        }}>
+          <Image src={semiCircle2Pic} alt="bitcoin" width={154} height={120} />
+          {/* <svg
             width="154"
             height="120"
             viewBox="0 0 154 120"
@@ -421,8 +453,8 @@ export default function Home() {
                 <stop offset="1" stop-color="white" stop-opacity="0" />
               </linearGradient>
             </defs>
-          </svg>
-        </div> */}
+          </svg> */}
+        </div>
       </div>
     )
   }
@@ -820,7 +852,7 @@ export default function Home() {
             </div>
 
             <div className="flex justify-between space-x-8">
-              <div className='min-w-[200px]'>
+              <div className="min-w-[200px]">
                 <h1 className="font-rubik text-xl font-medium not-italic leading-normal">
                   Quick Link
                 </h1>
@@ -835,7 +867,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className='min-w-[200px]'>
+              <div className="min-w-[200px]">
                 <h1 className="font-rubik text-xl font-medium not-italic leading-normal">
                   Resources
                 </h1>
