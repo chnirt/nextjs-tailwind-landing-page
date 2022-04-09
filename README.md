@@ -41,3 +41,4 @@ https://prettier.io/docs/en/configuration.html
 https://github.com/tailwindlabs/prettier-plugin-tailwindcss
 https://magic.reactjs.net/htmltojsx.htm
 https://react-spring.io/basics
+https://nextjs.org/docs/messages/install-sharp

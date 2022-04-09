@@ -9,6 +9,15 @@ import slide1Pic from '../assets/slide1.png'
 import slide2Pic from '../assets/slide2.png'
 import semiCirclePic from '../assets/semiCircle.png'
 import semiCircle2Pic from '../assets/semiCircle2.png'
+import ethPic from '../assets/eth.png'
+import btcPic from '../assets/btc.png'
+import slide3Pic from '../assets/slide3.png'
+import slide4Pic from '../assets/slide4.png'
+import btcChartPic from '../assets/btcChart.png'
+import statisticPic from '../assets/statistic.png'
+import tablePic from '../assets/table.png'
+import semiCircle3Pic from '../assets/semiCircle3.png'
+import semiCircle4Pic from '../assets/semiCircle4.png'
 
 export default function Home() {
   const renderNavbar = () => {
@@ -26,7 +35,7 @@ export default function Home() {
               <path
                 d="M19.9999 40C31.0456 40 39.9999 31.0457 39.9999 20C39.9999 8.95431 31.0456 0 19.9999 0C8.95424 0 -6.10352e-05 8.95431 -6.10352e-05 20C-6.10352e-05 31.0457 8.95424 40 19.9999 40Z"
                 fill="white"
-                fill-opacity="0.1"
+                fillOpacity="0.1"
               />
               <path
                 d="M18.8424 28.0463C14.9124 27.4707 11.8964 24.0828 11.8964 19.9891C11.8964 15.8954 14.9124 12.5075 18.8424 11.9322V7.69238C12.5855 8.29084 7.69232 13.5677 7.69232 19.9891C7.69232 26.4104 12.5855 31.687 18.8424 32.2858V28.0463Z"
@@ -175,10 +184,13 @@ export default function Home() {
             {/* image1 */}
           </div>
 
-          <div className="absolute top-[269px] right-[261px]" style={{
-            minWidth: 928,
-            minHeight: 606
-          }}>
+          <div
+            className="absolute top-[269px] right-[261px]"
+            style={{
+              minWidth: 928,
+              minHeight: 606,
+            }}
+          >
             <Image src={slide1Pic} alt="slide1" width={928} height={606} />
             {/* <svg
               width="928"
@@ -216,10 +228,13 @@ export default function Home() {
             </svg> */}
           </div>
 
-          <div className="absolute top-[226px] -left-[6px]" style={{
-            width: 730,
-            height: 461
-          }}>
+          <div
+            className="absolute top-[226px] -left-[6px]"
+            style={{
+              width: 730,
+              height: 461,
+            }}
+          >
             <Image src={slide2Pic} alt="slide1" width={730} height={461} />
             {/* <svg
               width="730"
@@ -258,7 +273,7 @@ export default function Home() {
 
   const renderSection2 = () => {
     return (
-      <div className="container my-[100px] relative">
+      <div className="container relative my-[100px]">
         <div className="flex justify-between">
           <div className="flex">
             <div className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-white10">
@@ -288,7 +303,7 @@ export default function Home() {
               </svg>
             </div>
             <div className="ml-6">
-              <h1 className="font-rubik text-[40px] font-bold not-italic leading-normal flex">
+              <h1 className="flex font-rubik text-[40px] font-bold not-italic leading-normal">
                 {/* $30B */}
                 $<MyNumber to={30} />B
               </h1>
@@ -318,9 +333,10 @@ export default function Home() {
               </svg>
             </div>
             <div className="ml-6">
-              <h1 className="font-rubik text-[40px] font-bold not-italic leading-normal flex">
+              <h1 className="flex font-rubik text-[40px] font-bold not-italic leading-normal">
                 {/* 10M+ */}
-                <MyNumber to={10} />M+
+                <MyNumber to={10} />
+                M+
               </h1>
               <p className="font-rubik text-base font-normal not-italic leading-7 tracking-[.01em] text-brand-sloganDescription">
                 Trusted Wallets Investor
@@ -355,10 +371,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute top-[53px] -right-[105px]" style={{
-          minWidth: 185,
-          minHeight: 196
-        }}>
+        <div
+          className="absolute top-[53px] -right-[105px]"
+          style={{
+            minWidth: 185,
+            minHeight: 196,
+          }}
+        >
           <Image src={semiCirclePic} alt="bitcoin" width={185} height={196} />
           {/* <svg
             width="185"
@@ -392,14 +411,14 @@ export default function Home() {
 
   const renderSection3 = () => {
     return (
-      <div className="container mt-[100px] relative">
+      <div className="container relative mt-[100px]">
         <div className="flex items-center justify-between">
           <div style={{ minWidth: 650, minHeight: 473 }}>
             <Image src={crappoPic} alt="bitcoin" width={650} height={473} />
             {/* image2 */}
           </div>
 
-          <div>
+          <div className="ml-[70px]">
             <div>
               <h1 className="font-rubik text-[40px] font-bold not-italic leading-normal">
                 Why you should choose CRAPPO
@@ -424,10 +443,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="absolute bottom-[67px] -right-[86px]" style={{
-          minWidth: 154,
-          minHeight: 120
-        }}>
+        <div
+          className="absolute bottom-[67px] -right-[86px]"
+          style={{
+            minWidth: 154,
+            minHeight: 120,
+          }}
+        >
           <Image src={semiCircle2Pic} alt="bitcoin" width={154} height={120} />
           {/* <svg
             width="154"
@@ -489,7 +511,7 @@ export default function Home() {
             height: 155,
           }}
         >
-          <div className="flex flex-1">
+          <div className="flex flex-1 items-center">
             <input
               type="text"
               className="w-full border-b-2 border-b-brand-borderBottom font-rubik text-xl font-normal not-italic leading-normal text-brand placeholder:font-rubik placeholder:text-xl placeholder:font-normal placeholder:not-italic placeholder:leading-normal placeholder:text-brand"
@@ -571,7 +593,7 @@ export default function Home() {
             xmlns="http://www.w3.org/2000/svg"
           >
             <circle cx="40" cy="40" r="40" fill="#1181E8" />
-            <g clip-path="url(#clip0_1_116)">
+            <g clipPath="url(#clip0_1_116)">
               <path
                 d="M39.89 51.9385L25.1555 43.243L39.881 64.0015L54.623 43.243L39.881 51.9385H39.89ZM40.109 16L25.3805 40.4455L40.109 49.156L54.8435 40.4545L40.109 16Z"
                 fill="white"
@@ -605,7 +627,7 @@ export default function Home() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_1_106)">
+            <g clipPath="url(#clip0_1_106)">
               <circle cx="40" cy="40" r="40" fill="white" />
               <path
                 d="M40 0C32.0888 0 24.3552 2.34596 17.7772 6.74121C11.1992 11.1365 6.07234 17.3836 3.04484 24.6927C0.0173314 32.0017 -0.774802 40.0444 0.768607 47.8036C2.31202 55.5628 6.12165 62.6902 11.7157 68.2843C17.3098 73.8784 24.4372 77.688 32.1964 79.2314C39.9556 80.7748 47.9983 79.9827 55.3074 76.9552C62.6164 73.9277 68.8635 68.8008 73.2588 62.2228C77.6541 55.6448 80 47.9112 80 40C80 29.3913 75.7857 19.2172 68.2843 11.7157C60.7828 4.21427 50.6087 0 40 0V0ZM39.1267 12.26H47.74C47.9162 12.2602 48.09 12.3012 48.2477 12.3796C48.4055 12.4581 48.543 12.5719 48.6495 12.7123C48.756 12.8527 48.8286 13.0158 48.8616 13.1888C48.8947 13.3619 48.8873 13.5403 48.84 13.71L42.0734 36.77L48.4234 34.83L47.0634 39.4467L40.65 41.3133L36.49 55.36H58.7433C58.9197 55.361 59.0935 55.4027 59.251 55.482C59.4086 55.5613 59.5457 55.6759 59.6515 55.817C59.7574 55.958 59.8292 56.1217 59.8613 56.2951C59.8935 56.4685 59.885 56.647 59.8367 56.8167L57.8967 63.4833C57.8038 63.8005 57.6107 64.079 57.3463 64.2773C57.082 64.4756 56.7605 64.583 56.43 64.5833H22.4433L28.1867 45.1767L21.8334 47.11L23.2333 42.5733L29.6 40.64L37.6734 13.3733C37.7619 13.0545 37.952 12.7733 38.2149 12.5723C38.4778 12.3714 38.7991 12.2617 39.13 12.26H39.1267Z"
@@ -627,7 +649,7 @@ export default function Home() {
     ]
     return (
       <div
-        className="flex w-screen justify-center "
+        className="flex w-screen justify-center"
         style={{
           backgroundColor: '#F8F9FB',
         }}
@@ -674,6 +696,194 @@ export default function Home() {
   }
 
   const renderSection6 = () => {
+    const data = [
+      {
+        id: 1,
+        title: 'Invest Smart',
+        description:
+          'Get full statistic information about the behaviour of buyers and sellers will help you to make the decision. ',
+        image: () => (
+          <Image src={btcChartPic} alt="btcChart" width={580} height={427} />
+        ),
+        reverse: false,
+      },
+      {
+        id: 2,
+        title: 'Detailed Statistics',
+        description:
+          'View all mining related information in realtime, at any point at any location and decide which polls you want to mine in.',
+        image: () => (
+          <Image
+            src={statisticPic}
+            alt="statisticPic"
+            width={710}
+            height={453}
+          />
+        ),
+        reverse: true,
+      },
+      {
+        id: 3,
+        title: 'Grow your profit and track your investments',
+        description:
+          'Use advanced analytical tools. Clear TradingView charts let you track current and historical profit investments.',
+        image: () => (
+          <Image src={tablePic} alt="tablePic" width={682} height={334} />
+        ),
+        reverse: false,
+      },
+    ]
+    return (
+      <div className="relative flex w-screen flex-col items-center bg-brand-primary py-[100px]">
+        <div className="max-w-[758px]">
+          <h1 className="text-center font-rubik text-[40px] font-bold not-italic leading-normal">
+            Market sentiments, portfolio, and run the infrastructure of your
+            choice
+          </h1>
+        </div>
+
+        {data.length &&
+          data.map((item) => (
+            <div
+              className={`container mt-[100px] flex justify-between flex-row-${item.reverse ? 'reverse' : ''
+                }`}
+            >
+              <div className="flex flex-1 flex-col">
+                <div>
+                  <h1 className="font-rubik text-[40px] font-bold not-italic leading-normal">
+                    {item.title}
+                  </h1>
+                </div>
+
+                <div className="mt-6">
+                  <h1 className="font-rubik text-base font-normal not-italic leading-7 tracking-[.01em] text-brand-sloganDescription">
+                    {item.description}
+                  </h1>
+                </div>
+
+                <div className="mt-8">
+                  <a
+                    href="#"
+                    className="rounded-full bg-brand-button py-3.5 px-8 text-center font-rubik text-base font-medium not-italic leading-6 tracking-[.01em]"
+                  >
+                    Learn More
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex flex-1">{item.image()}</div>
+            </div>
+          ))}
+
+        <div
+          className="absolute left-[151px] top-0"
+          style={{
+            width: 686,
+            height: 292,
+          }}
+        >
+          <Image
+            src={semiCircle3Pic}
+            alt="semiCircle3Pic"
+            width={686}
+            height={292}
+          />
+        </div>
+
+        <div
+          className="absolute right-0 bottom-0"
+          style={{
+            width: 320,
+            height: 336,
+          }}
+        >
+          <Image
+            src={semiCircle4Pic}
+            alt="semiCircle4Pic"
+            width={320}
+            height={336}
+          />
+        </div>
+      </div>
+    )
+  }
+
+  const renderSection7 = () => {
+    return (
+      <div className="relative flex min-h-[392px] w-screen justify-center bg-gradient-to-b from-[#2B076E] to-[#0D0D2B] py-[88px] px-[120px]">
+        <div className="container relative flex min-h-[216px] justify-between rounded-2xl bg-brand-blue1 p-12">
+          <div className="flex flex-1 flex-col">
+            <div>
+              <h1 className="font-rubik text-[32px] font-bold not-italic leading-normal">
+                Start mining now
+              </h1>
+            </div>
+
+            <div className="mt-4">
+              <h1 className="font-rubik text-base font-normal not-italic leading-7 tracking-[.01em]">
+                Join now with CRAPPO to get the latest news and start mining now
+              </h1>
+            </div>
+          </div>
+          <div className="flex flex-1 items-center">
+            <input
+              type="text"
+              className="w-full border-b-2 border-b-brand-borderBottom bg-transparent font-rubik text-base font-normal not-italic leading-7 tracking-[.01em] text-white placeholder:font-rubik placeholder:text-base placeholder:font-normal placeholder:not-italic placeholder:leading-7 placeholder:tracking-[.01em] placeholder:text-white"
+              placeholder="Enter your email"
+            />
+            <a
+              href="#"
+              className="ml-12 rounded-full bg-white py-3.5 px-8 text-center font-rubik text-lg font-medium not-italic leading-normal tracking-[.01em] text-brand"
+            >
+              Subscribe
+            </a>
+          </div>
+
+          <div
+            className="absolute left-[22px] top-0"
+            style={{
+              width: 160,
+              height: 258 - 42,
+            }}
+          >
+            <Image src={ethPic} alt="eth" width={160} height={258 - 42} />
+          </div>
+
+          <div
+            className="absolute right-[15px] bottom-0"
+            style={{
+              width: 140,
+              height: 185 - 50,
+            }}
+          >
+            <Image src={btcPic} alt="btc" width={140} height={185 - 50} />
+          </div>
+        </div>
+
+        <div
+          className="absolute left-[35px] top-0"
+          style={{
+            width: 849,
+            height: 392,
+          }}
+        >
+          <Image src={slide3Pic} alt="slide3" width={849} height={392} />
+        </div>
+
+        <div
+          className="absolute left-[395px] top-0"
+          style={{
+            width: 849,
+            height: 392,
+          }}
+        >
+          <Image src={slide4Pic} alt="slide4" width={849} height={392} />
+        </div>
+      </div>
+    )
+  }
+
+  const renderFooter = () => {
     const payments = [
       {
         id: 1,
@@ -685,7 +895,7 @@ export default function Home() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_1_493)">
+            <g clipPath="url(#clip0_1_493)">
               <path
                 d="M34.8931 16.6551C33.7776 16.213 32.5985 15.9912 31.4112 16C27.5718 16 24.8602 18.1037 24.841 21.1236C24.817 23.3421 26.7679 24.5924 28.2437 25.3336C29.7579 26.0958 30.2642 26.576 30.2594 27.2573C30.2498 28.2935 29.05 28.7633 27.9341 28.7633C26.4008 28.7633 25.5633 28.531 24.2747 27.9489L23.7972 27.7062L23.2525 31.1828C24.1859 31.6056 25.8681 31.9684 27.6054 31.9998C31.6872 31.9998 34.3556 29.9091 34.3868 26.6961C34.4204 24.9238 33.3645 23.5849 31.1425 22.4782C29.7915 21.7604 28.954 21.2802 28.954 20.552C28.954 19.9073 29.6715 19.2182 31.1713 19.2182C32.1694 19.192 33.1614 19.3957 34.082 19.8159L34.442 19.9908L34.9867 16.6316L34.8931 16.6551ZM44.8564 16.2819H41.8569C40.9234 16.2819 40.2203 16.5612 39.8124 17.5687L34.0436 31.7831H38.1254L38.9413 29.4523L43.923 29.4575C44.0405 30.003 44.4005 31.7831 44.4005 31.7831H47.9999L44.8564 16.2819ZM19.3194 16.1514H23.2093L20.776 31.6604H16.891L19.3194 16.1462V16.1514ZM9.44492 24.6994L9.84806 26.8527L13.6491 16.2819H17.7693L11.6478 31.7622H7.53721L4.17771 18.6545C4.1233 18.4383 3.99552 18.2527 3.82017 18.135C2.60931 17.4547 1.32633 16.9384 -6.10352e-05 16.5977L0.0527309 16.2715H6.31339C7.16286 16.308 7.84676 16.5977 8.07473 17.5843L9.44252 24.7072V24.6994H9.44492ZM40.0571 26.2811L41.6073 21.9431C41.5881 21.9901 41.9265 21.0479 42.1232 20.4658L42.3896 21.8048L43.2894 26.2785H40.0547V26.2811H40.0571Z"
                 fill="#E0E0E0"
@@ -734,7 +944,7 @@ export default function Home() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_1_482)">
+            <g clipPath="url(#clip0_1_482)">
               <path
                 d="M39.4018 24.8368C36.7296 35.5568 25.8685 42.0733 15.1638 39.401C4.44354 36.7288 -2.07302 25.8682 0.599319 15.1637C3.27151 4.44366 14.1168 -2.0729 24.8371 0.599443C35.5418 3.25601 42.0742 14.1166 39.4018 24.8368Z"
                 fill="#E0E0E0"
@@ -813,7 +1023,7 @@ export default function Home() {
                   <path
                     d="M19.9999 40C31.0456 40 39.9999 31.0457 39.9999 20C39.9999 8.95431 31.0456 0 19.9999 0C8.95424 0 -6.10352e-05 8.95431 -6.10352e-05 20C-6.10352e-05 31.0457 8.95424 40 19.9999 40Z"
                     fill="white"
-                    fill-opacity="0.1"
+                    fillOpacity="0.1"
                   />
                   <path
                     d="M18.8424 28.0463C14.9124 27.4707 11.8964 24.0828 11.8964 19.9891C11.8964 15.8954 14.9124 12.5075 18.8424 11.9322V7.69238C12.5855 8.29084 7.69232 13.5677 7.69232 19.9891C7.69232 26.4104 12.5855 31.687 18.8424 32.2858V28.0463Z"
@@ -859,8 +1069,11 @@ export default function Home() {
 
                 <div className="mt-6">
                   {quickLinks.length &&
-                    quickLinks.map((link) => (
-                      <h1 className="font-rubik text-base not-italic leading-[38px]">
+                    quickLinks.map((link, li) => (
+                      <h1
+                        key={`link-${li}`}
+                        className="font-rubik text-base not-italic leading-[38px]"
+                      >
                         {link.name}
                       </h1>
                     ))}
@@ -874,8 +1087,11 @@ export default function Home() {
 
                 <div className="mt-6">
                   {resources.length &&
-                    resources.map((resource) => (
-                      <h1 className="font-rubik text-base not-italic leading-[38px]">
+                    resources.map((resource, ri) => (
+                      <h1
+                        key={`resource-${ri}`}
+                        className="font-rubik text-base not-italic leading-[38px]"
+                      >
                         {resource.name}
                       </h1>
                     ))}
@@ -890,8 +1106,11 @@ export default function Home() {
 
               <div className="mt-10 flex space-x-6">
                 {payments.length &&
-                  payments.map((payment) => (
-                    <div className="flex h-16 w-24 items-center justify-center rounded-lg bg-brand-white10">
+                  payments.map((payment, pi) => (
+                    <div
+                      key={`payment-${pi}`}
+                      className="flex h-16 w-24 items-center justify-center rounded-lg bg-brand-white10"
+                    >
                       {payment.icon()}
                     </div>
                   ))}
@@ -1003,7 +1222,7 @@ export default function Home() {
       <main
       // className={styles.main}
       >
-        <div className=" w-[100vw] overflow-y-scroll overflow-x-hidden bg-brand text-white">
+        <div className=" w-[100vw] overflow-x-hidden overflow-y-scroll bg-brand text-white">
           <div className="mx-auto flex h-[100vh] flex-col items-center">
             {renderNavbar()}
             {renderSection1()}
@@ -1012,6 +1231,8 @@ export default function Home() {
             {renderSection4()}
             {renderSection5()}
             {renderSection6()}
+            {renderSection7()}
+            {renderFooter()}
           </div>
         </div>
       </main>

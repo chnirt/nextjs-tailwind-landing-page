@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         brand: {
           DEFAULT: "#0D0D2B",
+          primary: '#2B076E',
           icon: "#3671E9",
           button: "#3671E9",
           white10: "#FFFFFF10",
