@@ -77,7 +77,7 @@ export const MyCard = ({ coin }) => {
                 cy="32"
                 r="31"
                 stroke="#2B076E"
-                stroke-opacity="0.2"
+                strokeOpacity="0.2"
                 strokeWidth="2"
               />
               <path

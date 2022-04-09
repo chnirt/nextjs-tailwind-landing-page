@@ -1003,7 +1003,7 @@ export default function Home() {
       <main
       // className={styles.main}
       >
-        <div className=" w-[100vw] overflow-y-scroll bg-brand text-white">
+        <div className=" w-[100vw] overflow-y-scroll overflow-x-hidden bg-brand text-white">
           <div className="mx-auto flex h-[100vh] flex-col items-center">
             {renderNavbar()}
             {renderSection1()}
