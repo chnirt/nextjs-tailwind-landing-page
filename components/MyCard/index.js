@@ -1,8 +1,13 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
-export const MyCard = ({ coin }) => {
+export const MyCard = ({ coin, index }) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: "-100%" }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1, delay: index * 0.125 }}
       className="flex flex-col items-center rounded-2xl py-12 px-6"
       style={{
         backgroundColor: coin.selected ? '#2B076E' : '#ffffff',
@@ -88,6 +93,6 @@ export const MyCard = ({ coin }) => {
           </a>
         )}
       </div>
-    </div>
+    </motion.div>
   )
 }

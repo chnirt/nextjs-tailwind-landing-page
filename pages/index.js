@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { MyCard } from '../components/MyCard'
 import styles from '../styles/Home.module.css'
 import bitCoinPic from '../assets/bitcoin.png'
@@ -128,31 +129,54 @@ export default function Home() {
       <div className="container mt-[50px] mb-[100px] flex justify-between">
         <div className="flex flex-col justify-center">
           <div>
-            <div className="inline-flex items-center rounded-full bg-brand-white10 p-1">
+            <motion.div
+              initial={{ opacity: 0, x: '-100%' }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="inline-flex items-center rounded-full bg-brand-white10 p-1"
+            >
               <div className="rounded-full bg-white px-4 py-1 font-rubik text-base font-medium uppercase not-italic leading-normal tracking-[.04em] text-brand">
                 75% SAVE
               </div>
               <p className="ml-2 px-2 font-rubik text-base font-normal not-italic leading-7 tracking-[.01em]">
                 For the Black Friday weekend
               </p>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="mt-6">
+          <motion.div
+            initial={{ opacity: 0, x: '-100%' }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.125 }}
+            className="mt-6"
+          >
             <h1 className="font-rubik text-[64px] font-bold not-italic">
               Fastest & secure platform to invest in crypto
             </h1>
-          </div>
+          </motion.div>
 
-          <div className="mt-6">
+          <motion.div
+            initial={{ opacity: 0, x: '-100%' }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.25 }}
+            className="mt-6"
+          >
             <h1 className="font-rubik text-base font-normal not-italic leading-7 tracking-[.01em] text-brand-sloganDescription">
               Buy and sell cryptocurrencies, trusted by 10M wallets with over
               $30 billion in transactions.
             </h1>
-          </div>
+          </motion.div>
 
           <div className="mt-8">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: '-100%' }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.5 }}
+            >
               <a
                 href="#"
                 className="inline-flex items-center rounded-full bg-brand-button px-6 py-[18px]"
@@ -174,17 +198,32 @@ export default function Home() {
                   </svg>
                 </div>
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
 
         <div className="relative">
-          <div style={{ minWidth: 604, minHeight: 585 }}>
+          {/* <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          /> */}
+          <motion.div
+            style={{ minWidth: 604, minHeight: 585 }}
+            initial={{ opacity: 0, x: '100%' }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+          >
             <Image src={bitCoinPic} alt="bitcoin" width={604} height={585} />
             {/* image1 */}
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
             className="absolute top-[269px] right-[261px]"
             style={{
               minWidth: 928,
@@ -226,9 +265,13 @@ export default function Home() {
                 </linearGradient>
               </defs>
             </svg> */}
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
+            initial={{ opacity: 0, x: '100%' }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
             className="absolute top-[226px] -left-[6px]"
             style={{
               width: 730,
@@ -265,7 +308,7 @@ export default function Home() {
                 </linearGradient>
               </defs>
             </svg> */}
-          </div>
+          </motion.div>
         </div>
       </div>
     )
@@ -275,7 +318,13 @@ export default function Home() {
     return (
       <div className="container relative my-[100px]">
         <div className="flex justify-between">
-          <div className="flex">
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex"
+          >
             <div className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-white10">
               <svg
                 width="32"
@@ -311,9 +360,15 @@ export default function Home() {
                 Digital Currency Exchanged
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex">
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex"
+          >
             <div className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-white10">
               <svg
                 width="40"
@@ -342,9 +397,15 @@ export default function Home() {
                 Trusted Wallets Investor
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="flex">
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex"
+          >
             <div className="flex h-20 w-20 items-center justify-center rounded-full bg-brand-white10">
               <svg
                 width="40"
@@ -368,10 +429,14 @@ export default function Home() {
                 Countries Supported
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
           className="absolute top-[53px] -right-[105px]"
           style={{
             minWidth: 185,
@@ -404,7 +469,7 @@ export default function Home() {
               </linearGradient>
             </defs>
           </svg> */}
-        </div>
+        </motion.div>
       </div>
     )
   }
@@ -413,37 +478,64 @@ export default function Home() {
     return (
       <div className="container relative mt-[100px]">
         <div className="flex items-center justify-between">
-          <div style={{ minWidth: 650, minHeight: 473 }}>
+          <motion.div
+            initial={{ opacity: 0, x: '-100%' }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            style={{ minWidth: 650, minHeight: 473 }}
+          >
             <Image src={crappoPic} alt="bitcoin" width={650} height={473} />
             {/* image2 */}
-          </div>
+          </motion.div>
 
           <div className="ml-[70px]">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: '100%' }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+            >
               <h1 className="font-rubik text-[40px] font-bold not-italic leading-normal">
                 Why you should choose CRAPPO
               </h1>
-            </div>
+            </motion.div>
 
-            <div className="mt-6">
+            <motion.div
+              initial={{ opacity: 0, x: '100%' }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.125 }}
+              className="mt-6"
+            >
               <h1 className="font-rubik text-base font-normal not-italic leading-7 tracking-[.01em] text-brand-sloganDescription">
                 Experience the next generation cryptocurrency platform. No
                 financial borders, extra fees, and fake reviews.
               </h1>
-            </div>
+            </motion.div>
 
-            <div className="mt-8">
+            <motion.div
+              initial={{ opacity: 0, x: '100%' }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.25 }}
+              className="mt-8"
+            >
               <a
                 href="#"
                 className="rounded-full bg-brand-button py-3.5 px-8 text-center font-rubik text-base font-medium not-italic leading-6 tracking-[.01em]"
               >
                 Learn More
               </a>
-            </div>
+            </motion.div>
           </div>
         </div>
 
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
           className="absolute bottom-[67px] -right-[86px]"
           style={{
             minWidth: 154,
@@ -476,7 +568,7 @@ export default function Home() {
               </linearGradient>
             </defs>
           </svg> */}
-        </div>
+        </motion.div>
       </div>
     )
   }
@@ -490,18 +582,30 @@ export default function Home() {
             maxWidth: 622,
           }}
         >
-          <div className="items-center">
+          <motion.div
+            initial={{ opacity: 0, y: '-100%' }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="items-center"
+          >
             <h1 className="text-center font-rubik text-[40px] font-bold not-italic leading-normal">
               Check how much you can earn
             </h1>
-          </div>
+          </motion.div>
 
-          <div className="mt-6">
+          <motion.div
+            initial={{ opacity: 0, y: '-100%' }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.125 }}
+            className="mt-6"
+          >
             <h1 className="text-center font-rubik text-base font-normal not-italic leading-7 tracking-[.01em] text-brand-sloganDescription">
               Let’s check your hash rate to see how much you will earn today,
               Exercitation veniam consequat sunt nostrud amet.
             </h1>
-          </div>
+          </motion.div>
         </div>
 
         <div
@@ -511,15 +615,27 @@ export default function Home() {
             height: 155,
           }}
         >
-          <div className="flex flex-1 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: '-100%' }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="flex flex-1 items-center"
+          >
             <input
               type="text"
               className="w-full border-b-2 border-b-brand-borderBottom font-rubik text-xl font-normal not-italic leading-normal text-brand placeholder:font-rubik placeholder:text-xl placeholder:font-normal placeholder:not-italic placeholder:leading-normal placeholder:text-brand"
               placeholder="Enter your hash rate"
             />
-          </div>
+          </motion.div>
 
-          <div className="flex flex-1 items-center">
+          <motion.div
+            initial={{ opacity: 0, y: '-100%' }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="flex flex-1 items-center"
+          >
             <select className="w-full border-b-2 border-b-brand-borderBottom text-brand">
               <option>TH/s</option>
             </select>
@@ -529,7 +645,7 @@ export default function Home() {
             >
               Calculate
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
     )
@@ -662,18 +778,31 @@ export default function Home() {
               height: 216,
             }}
           >
-            <h1 className="font-rubik text-base font-medium uppercase not-italic leading-normal tracking-[.04em] text-brand-blue1">
-              ESTIMATED 24 HOUR REVENUE:
-            </h1>
-            <h1 className="font-rubik text-[32px] font-bold not-italic leading-normal tracking-[.04em] text-brand">
-              0.055 130 59 ETH <span className="text-brand-blue1">($1275)</span>
-            </h1>
-            <h1 className="font-rubik text-base font-normal not-italic leading-7 tracking-[.01em] text-brand-grey1">
-              Revenue will change based on mining difficulty and Ethereum price.
-            </h1>
+            <motion.div
+              initial={{ opacity: 0, y: '-100%' }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+            >
+              <h1 className="font-rubik text-base font-medium uppercase not-italic leading-normal tracking-[.04em] text-brand-blue1">
+                ESTIMATED 24 HOUR REVENUE:
+              </h1>
+              <h1 className="font-rubik text-[32px] font-bold not-italic leading-normal tracking-[.04em] text-brand">
+                0.055 130 59 ETH{' '}
+                <span className="text-brand-blue1">($1275)</span>
+              </h1>
+              <h1 className="font-rubik text-base font-normal not-italic leading-7 tracking-[.01em] text-brand-grey1">
+                Revenue will change based on mining difficulty and Ethereum
+                price.
+              </h1>
+            </motion.div>
           </div>
 
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: '-100%' }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
             className="mt-[50px]"
             style={{
               maxWidth: 741,
@@ -682,12 +811,12 @@ export default function Home() {
             <h1 className="text-center font-rubik text-[40px] font-bold not-italic leading-normal text-brand">
               Trade securely and market the high growth cryptocurrencies.
             </h1>
-          </div>
+          </motion.div>
 
           <div className="my-auto mt-16 flex justify-between space-x-11">
             {coins.length > 0 &&
               coins.map((coin, ci) => (
-                <MyCard key={`coin-${ci}`} coin={coin} />
+                <MyCard key={`coin-${ci}`} index={ci} coin={coin} />
               ))}
           </div>
         </div>
@@ -735,20 +864,33 @@ export default function Home() {
     ]
     return (
       <div className="relative flex w-screen flex-col items-center bg-brand-primary py-[100px]">
-        <div className="max-w-[758px]">
+        <motion.div
+          initial={{ opacity: 0, y: '-100%' }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="max-w-[758px]"
+        >
           <h1 className="text-center font-rubik text-[40px] font-bold not-italic leading-normal">
             Market sentiments, portfolio, and run the infrastructure of your
             choice
           </h1>
-        </div>
+        </motion.div>
 
         {data.length &&
-          data.map((item) => (
+          data.map((item, ii) => (
             <div
-              className={`container mt-[100px] flex justify-between flex-row-${item.reverse ? 'reverse' : ''
+              key={`item-${ii}`}
+              className={`container mt-[100px] flex justify-between ${item.reverse ? 'flex-row-reverse' : 'flex-row'
                 }`}
             >
-              <div className="flex flex-1 flex-col">
+              <motion.div
+                initial={{ opacity: 0, x: item.reverse ? '100%' : '-100%' }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+                className="flex flex-1 flex-col"
+              >
                 <div>
                   <h1 className="font-rubik text-[40px] font-bold not-italic leading-normal">
                     {item.title}
@@ -769,9 +911,17 @@ export default function Home() {
                     Learn More
                   </a>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="flex flex-1">{item.image()}</div>
+              <motion.div
+                initial={{ opacity: 0, x: item.reverse ? '-100%' : '100%' }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+                className="flex flex-1"
+              >
+                {item.image()}
+              </motion.div>
             </div>
           ))}
 
@@ -811,7 +961,13 @@ export default function Home() {
   const renderSection7 = () => {
     return (
       <div className="relative flex min-h-[392px] w-screen justify-center bg-gradient-to-b from-[#2B076E] to-[#0D0D2B] py-[88px] px-[120px]">
-        <div className="container relative flex min-h-[216px] justify-between rounded-2xl bg-brand-blue1 p-12">
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="container relative flex min-h-[216px] justify-between rounded-2xl bg-brand-blue1 p-12"
+        >
           <div className="flex flex-1 flex-col">
             <div>
               <h1 className="font-rubik text-[32px] font-bold not-italic leading-normal">
@@ -858,7 +1014,7 @@ export default function Home() {
           >
             <Image src={btcPic} alt="btc" width={140} height={185 - 50} />
           </div>
-        </div>
+        </motion.div>
 
         <div
           className="absolute left-[35px] top-0"
@@ -1008,7 +1164,13 @@ export default function Home() {
       },
     ]
     return (
-      <div className="flex w-screen justify-center bg-brand-black1 py-20">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        className="flex w-screen justify-center bg-brand-black1 py-20"
+      >
         <div className="container">
           <div className="flex items-start justify-between">
             <div className="flex items-center">
@@ -1193,7 +1355,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     )
   }
 
